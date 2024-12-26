@@ -24,8 +24,13 @@
   </head>
 
   <body>
-    HEADER HERE...
-    <%= yield %>
+
+    <%= render "home/header" %>
+ 
+    <div class="container mx-auto"> 
+      <%= yield %>
+    </div>
+    
     FOOTER HERE...
   </body>
 </html>
