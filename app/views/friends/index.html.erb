@@ -17,6 +17,7 @@
             <th class="border px-4 py-2">Email</th>
             <th class="border px-4 py-2">Phone</th>
             <th class="border px-4 py-2">Twitter</th>
+            <th class="border px-4 py-2">User Id</th>
             <th class="border px-4 py-2">Actions</th>
           </tr>
         </thead>
@@ -28,6 +29,7 @@
               <td class="border px-4 py-2"><%= friend.email %></td>
               <td class="border px-4 py-2"><%= friend.phone %></td>
               <td class="border px-4 py-2"><%= friend.twitter %></td>
+              <th class="border px-4 py-2"><%=friend.user_id%></th>
               <td class="border px-4 py-2 text-blue-500">
                 <%= link_to "Show", friend %>
                 <%= link_to "Edit", edit_friend_path(friend) %>

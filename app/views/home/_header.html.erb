@@ -10,6 +10,9 @@
   </div>
   <div>
     <nav class="text-white">
+      <% if user_signed_in? %>
+        <%= current_user.email %>
+      <% end %>
       <ul class="flex gap-4 text-sm">
         <% if user_signed_in? %>
           <li><%= link_to "Sign out", destroy_user_session_path, "data-turbo-method": :delete %></li>
