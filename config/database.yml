@@ -37,3 +37,17 @@ production:
     pool: 5
     username: <%= ENV["DB_USERNAME"] %>
     password: <%= ENV["DB_PASSWORD"] %>
+  cache:
+    adapter: postgresql
+    encoding: unicode
+    database: my_app_cable_production
+    pool: 5
+    username: <%= ENV["DB_USERNAME"] %>
+    password: <%= ENV["DB_PASSWORD"] %>
+  queue:
+    adapter: postgresql
+    encoding: unicode
+    database: my_app_cable_production
+    pool: 5
+    username: <%= ENV["DB_USERNAME"] %>
+    password: <%= ENV["DB_PASSWORD"] %>
