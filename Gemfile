@@ -58,7 +58,6 @@ group :development do
   gem "web-console"
   gem "htmlbeautifier"
   gem "tailwindcss-rails", "~> 3.0"
-  # Use sqlite3 as the database for Active Record
   gem "sqlite3", ">= 2.1"
 end
 
@@ -70,5 +69,4 @@ end
 
 group :production do
   gem "pg", "~> 1.5", ">= 1.5.9"
-  # gem 'rails_12factor', '~> 0.0.3'
 end
