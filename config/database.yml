@@ -23,18 +23,12 @@ test:
 # Store production database in the storage/ directory, which by default
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
-  primary:
-    <<: *default
-    database: storage/production.postgresql
-  cache:
-    <<: *default
-    database: storage/production_cache.postgresql
-    migrations_paths: db/cache_migrate
-  queue:
-    <<: *default
-    database: storage/production_queue.postgresql
-    migrations_paths: db/queue_migrate
-  cable:
-    <<: *default
-    database: storage/production_cable.postgresql
-    migrations_paths: db/cable_migrate
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: <%= ENV['PGDATABASE'] %>
+  username: <%= ENV['PGUSER'] %>
+  password: <%= ENV['PGPASSWORD'] %>
+  host: <%= ENV['PGHOST'] || 'localhost' %>
+  port: <%= ENV['PGPORT'] || 5432 %>
