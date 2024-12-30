@@ -9,6 +9,7 @@ class FriendsController < ApplicationController
 
   # GET /friends/1 or /friends/1.json
   def show
+    @full_name = "#{@friend.full_name} #{@friend.last_name}"
   end
 
   # GET /friends/new

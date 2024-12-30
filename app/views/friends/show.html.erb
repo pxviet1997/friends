@@ -3,27 +3,18 @@
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mt-4 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
-    <div>
-      <div id="<%= dom_id @friend %>">
-        <p class="my-5">
-          <strong class="block font-medium mb-1">First name:</strong>
-          <%= @friend.first_name %>
-        </p>
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Last name:</strong>
-          <%= @friend.last_name %>
-        </p>
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Email:</strong>
-          <%= @friend.email %>
-        </p>
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Phone:</strong>
-          <%= @friend.phone %>
-        </p>
-      </div>
+    <h1 class="font-bold text-4xl mb-5"><%= @friend.full_name %></h1>
+    <div id="<%= dom_id @friend %>">
+      <p class="flex gap-2">
+        <strong class="block font-semibold mb-1">Email:</strong>
+        <%= @friend.email %>
+      </p>
+      <p class="flex gap-2">
+        <strong class="block font-semibold mb-1">Phone:</strong>
+        <%= @friend.phone %>
+      </p>
     </div>
-    <%= link_to "Edit this friend", edit_friend_path(@friend), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this friend", edit_friend_path(@friend), class: "mt-5 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to "Back to friends", friends_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
       <%= button_to "Destroy this friend", @friend, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>

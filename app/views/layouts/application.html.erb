@@ -24,8 +24,10 @@
   </head>
   <body>
     <%= render "home/header" %>
-    <div class="container mx-auto max-w-[1080px] my-4 px-7">
-      <%= yield %>
+    <div class="px-7">
+      <div class="container border border-gray-400 p-5 rounded-md shadow outline-none lg:mx-auto max-w-[1080px] my-4">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
