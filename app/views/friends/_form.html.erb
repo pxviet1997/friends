@@ -10,10 +10,10 @@
     </div>
   <% end %>
   <div class="flex flex-col gap-4">
-    <%= form.text_field :first_name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", placeholder: 'First name' %>
-    <%= form.text_field :last_name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", placeholder: 'Last name' %>
-    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", placeholder:'Email' %>
-    <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", placeholder: 'Phone' %>
+    <%= form.text_field :first_name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", placeholder: "First name" %>
+    <%= form.text_field :last_name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", placeholder: "Last name" %>
+    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", placeholder: "Email" %>
+    <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", placeholder: "Phone" %>
     <div class="hidden">
       <%= form.number_field :user_id, id: :friend_user_id, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", value: current_user.id %>
     </div>
