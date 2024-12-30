@@ -66,6 +66,6 @@ class FriendsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def friend_params
-      params.expect(friend: [ :first_name, :last_name, :email, :phone, :twitter, :user_id ])
+      params.expect(friend: [ :first_name, :last_name, :email, :phone, :user_id ])
     end
 end

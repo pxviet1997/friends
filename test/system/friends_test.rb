@@ -18,7 +18,6 @@ class FriendsTest < ApplicationSystemTestCase
     fill_in "First name", with: @friend.first_name
     fill_in "Last name", with: @friend.last_name
     fill_in "Phone", with: @friend.phone
-    fill_in "Twitter", with: @friend.twitter
     click_on "Create Friend"
 
     assert_text "Friend was successfully created"
@@ -33,7 +32,6 @@ class FriendsTest < ApplicationSystemTestCase
     fill_in "First name", with: @friend.first_name
     fill_in "Last name", with: @friend.last_name
     fill_in "Phone", with: @friend.phone
-    fill_in "Twitter", with: @friend.twitter
     click_on "Update Friend"
 
     assert_text "Friend was successfully updated"
