@@ -11,8 +11,8 @@
     <%= f.password_field :current_password, autocomplete: "current-password", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full", placeholder: "Current password (we need your current password to confirm your changes)" %>
   </div>
   <div class="actions flex items-center gap-2 mt-5">
-    <%= f.submit "Update", class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, "data-turbo-method": :delete, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= f.submit "Update", class: "rounded-lg py-3 px-5 bg-gray-100 shadow inline-block font-medium" %>
+    <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, "data-turbo-method": :delete, class: "rounded-lg shadow py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 <% end %>
 <%= link_to "Back", :back, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>

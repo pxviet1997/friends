@@ -6,7 +6,7 @@
     <% content_for :title, "Friends" %>
     <div class="flex justify-between items-center">
       <h1 class="font-bold text-4xl">Friends</h1>
-      <%= link_to "New friend", new_friend_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+      <%= link_to "New friend", new_friend_path, class: "rounded-lg py-3 shadow px-5 bg-blue-600 text-white block font-medium" %>
     </div>
     <% if !@friends.empty? %>
       <div id="friends" class="min-w-full">
