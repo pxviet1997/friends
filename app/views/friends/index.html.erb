@@ -1,35 +1,35 @@
-<div class="w-full">
+<div class="w-full p-6 bg-white border border-gray-300 rounded shadow outline-none">
   <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mt-4 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <p class="inline-block px-3 py-2 mt-4 font-medium text-green-500 rounded-lg bg-green-50" id="notice"><%= notice %></p>
   <% end %>
   <div class="flex flex-col gap-5">
     <% content_for :title, "Friends" %>
-    <div class="flex justify-between items-center">
-      <h1 class="font-bold text-4xl">Friends</h1>
-      <%= link_to "New friend", new_friend_path, class: "rounded-lg py-3 shadow px-5 bg-blue-600 text-white block font-medium" %>
+    <div class="flex items-center justify-between">
+      <h1 class="text-4xl font-bold">Friends</h1>
+      <%= link_to "New friend", new_friend_path, class: 'btn btn-indigo' %>
     </div>
     <% if !@friends.empty? %>
       <div id="friends" class="min-w-full">
-        <table class="table-auto w-full border shadow outline outline-1 outline-gray-400 rounded-md overflow-hidden">
+        <table class="w-full overflow-hidden border rounded-md shadow table-auto outline outline-1 outline-gray-400">
           <thead>
             <tr>
-              <th class="border px-4 py-2">First name</th>
-              <th class="border px-4 py-2">Last name</th>
-              <th class="border px-4 py-2">Email</th>
-              <th class="border px-4 py-2">Phone</th>
-              <th class="border px-4 py-2">User Id</th>
-              <th class="border px-4 py-2">Actions</th>
+              <th class="px-4 py-2 border">First name</th>
+              <th class="px-4 py-2 border">Last name</th>
+              <th class="px-4 py-2 border">Email</th>
+              <th class="px-4 py-2 border">Phone</th>
+              <th class="px-4 py-2 border">User Id</th>
+              <th class="px-4 py-2 border">Actions</th>
             </tr>
           </thead>
           <tbody>
             <% @friends.each do |friend| %>
               <tr>
-                <td class="border px-4 py-2"><%= friend.first_name %></td>
-                <td class="border px-4 py-2"><%= friend.last_name %></td>
-                <td class="border px-4 py-2"><%= friend.email %></td>
-                <td class="border px-4 py-2"><%= friend.phone %></td>
-                <th class="border px-4 py-2"><%=friend.user_id%></th>
-                <td class="border px-4 py-2 text-blue-500">
+                <td class="px-4 py-2 border"><%= friend.first_name %></td>
+                <td class="px-4 py-2 border"><%= friend.last_name %></td>
+                <td class="px-4 py-2 border"><%= friend.email %></td>
+                <td class="px-4 py-2 border"><%= friend.phone %></td>
+                <th class="px-4 py-2 border"><%=friend.user_id%></th>
+                <td class="px-4 py-2 text-blue-500 border">
                   <%= link_to "Show", friend %>
                   <%= link_to "Edit", edit_friend_path(friend) %>
                   <%= button_to "Delete", friend, method: :delete %>

@@ -1,5 +1,7 @@
-<div class="w-full">
-  <h1 class="font-bold text-4xl mb-5">New friend</h1>
+<div class="w-full p-6 bg-white border border-gray-300 rounded shadow outline-none">
+  <h1 class="mb-5 text-4xl font-bold">New friend</h1>
+
   <%= render "form", friend: @friend %>
-  <%= link_to "Back to friends", friends_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
+  <%= link_to "Back to friends", friends_path, class: 'btn btn-indigo' %>
 </div>
